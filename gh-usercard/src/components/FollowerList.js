@@ -12,7 +12,7 @@ class FollowerList extends Component {
   componentDidMount() {
     console.log(`follower list mounted`);
     axios
-      .get(`https://api.github.com/users/${this.props.username}/followers`)
+      .get(`https://api.github.com/users/Trip4077/followers`)
       .then(response => this.setState({ followers: response.data }))
       .catch(error => console.log("Uh oh, something went wrong!"));
   }
@@ -20,7 +20,7 @@ class FollowerList extends Component {
   componentDidUpdate(prevState, prevProps) {
     if (prevProps !== this.props || prevState !== this.state) {
       axios
-        .get(`https://api.github.com/users/${this.props.username}/followers`)
+        .get(`https://api.github.com/users/Trip4077/followers`)
         .then(response => this.setState({ followers: response.data }))
         .catch(error => console.log("Uh oh, something went wrong!"));
     }

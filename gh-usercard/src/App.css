@@ -1,3 +1,7 @@
+body {
+  background-color: pink;
+}
+
 .appStyles {
   width: 100%;
   background-color: pink;
@@ -40,8 +44,8 @@
 }
 
 .userCard {
-  width: 60%;
-  margin: 5% 20%;
+  width: 50%;
+  margin: 5% 25%;
   border-radius: 5px;
 }
 
@@ -68,14 +72,14 @@
 .followersContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .followerCard {
   width: 30%;
   margin: 5% 9%;
-  background-color: grey;
-  border: 1px black solid;
+  background-color: white;
+  border: 3px black dashed;
   border-radius: 5px;
   text-align: center;
 }

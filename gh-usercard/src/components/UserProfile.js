@@ -6,14 +6,14 @@ import FollowerList from "./FollowerList.js";
 class UserProfile extends Component {
   constructor() {
     super();
-    this.state = { user: "tboudreau614", search: "" };
+    this.state = { user: "Trip4077", search: "" };
     console.log(`user profile constructed`);
   }
 
   componentDidMount() {
     console.log(`user profile mounted`);
     axios
-      .get(`https://api.github.com/users/tboudreau614`)
+      .get(`https://api.github.com/users/Trip4077`)
       .then(response => this.setState({ user: response.data }))
       .catch(error => console.log("Uh oh, Uh oh, something went wrong!!"));
   }
@@ -44,7 +44,7 @@ class UserProfile extends Component {
     console.log(`user profile rendered`);
     return (
       <div className="appContainer">
-        <form className="searchForm" onSubmit={this.submitHandler}>
+        {/* <form className="searchForm" onSubmit={this.submitHandler}>
           <input
             type="text"
             name="search"
@@ -53,7 +53,7 @@ class UserProfile extends Component {
             placeholder="Search..."
           />
           <button>Search</button>
-        </form>
+        </form> */}
         <UserCard
           image={this.state.user.avatar_url}
           name={this.state.user.name}
